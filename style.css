@@ -1,0 +1,97 @@
+
+/* VARIABLE de couleur SCSS SASS ce n'est pas du CSS */
+
+
+$light-purple: #a5b4fc;
+
+ 
+
+.navbar__link--purple {
+
+  color: #a5b4fc;
+
+}
+
+ 
+
+.intro__title {
+
+  margin-bottom: 15px;
+
+  font-size: 3.5em;
+
+  color: #a5b4fc;
+
+  font-family: 'Montserrat', sans-serif;
+
+}
+
+ 
+
+.intro__content--purple {
+
+  color: #a5b4fc;
+
+  font-style: normal;
+
+}
+ /*   les mixins stockent des blocs entiers de code
+ Pour déclarer une mixin, déclarez @mixin  suivi du nom de votre mixin.
+  @mixin title-shadow ce qui donne du 55rem avec une couleur de #0f0f1c*/
+  @mixin title-shadow {
+
+    text-shadow: .55rem .55rem #0f0f1c;
+  
+  }
+
+
+  /* pour que cette mixin fonctionne il faut qu'elle soit appelée 
+  comme ceci*/
+
+  .intro__title {
+
+    @include title-shadow;
+   
+   }
+
+
+
+   /* explication de cette fonctionnalité */
+/* j 'ai ma variable */
+   $light-purple: #a5b4fc; 
+
+   /* la contenance de ma mixin */
+   @mixin title-shadow {
+
+    text-shadow: .55rem .55rem #0f0f1c;
+  
+  }
+
+
+  /* j 'introduit ma mixin dans le code ou je souhaite le changement */
+  .intro__title {
+
+    @include title-shadow;
+   
+   }
+/* 
+
+    Les variables stockent des valeurs que vous pouvez réutiliser dans tout votre codebase.
+
+    Pour définir une variable, tapez le signe dollar $  puis le nom de la variable :   $nom-de-votre-variable  .
+
+    Quand vous modifiez la valeur de la variable, cela modifiera cette valeur partout où la variable a été utilisée.
+
+    Les mixins sont très similaires aux variables, mais au lieu de ne stocker que des valeurs, elles stockent des blocs de code entiers.
+
+    On utilise le mot clé @mixin  pour déclarer une mixin.
+
+    On utilise le mot clé @include  pour utiliser une mixin dans son code.
+
+    Lorsque Sass compile les instances d’une mixin, il remplace la mixin par les règles qu’elle contient.
+
+    Pour rendre les mixins plus adaptables et réutilisables, vous pouvez inclure des arguments lorsque vous les déclarez.           
+
+
+
+*/
